@@ -61,8 +61,8 @@ function Settings()
   }  
   
   -- default global stats
-  settings.mean = torch.Tensor(settings.inputSize):zero();    
-  settings.var = torch.Tensor(settings.inputSize):fill(1);    
+  settings.mean = torch.FloatTensor(settings.inputSize):zero();    
+  settings.var = torch.FloatTensor(settings.inputSize):fill(1);    
   
   -- log
   flog = logroll.file_logger(settings.outputFolder .. settings.logFolder .. '/settings.log');
